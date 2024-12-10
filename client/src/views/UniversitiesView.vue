@@ -151,18 +151,22 @@ function onImgClick(item)
             </div>
         </form>
 
-        <div>
-            <h3 class="filterHeader">Статистика по университетам</h3>
-            <div v-for="item in universities_stats_by_names">
-                <div class="row">
-                    <div class="col">Название:
-                        {{ item.university_name }}
+        <div class="row">
+            <div class="col">
+                <h3 class="filterHeader">Статистика по университетам</h3>
+                <div class="statsRow">
+                    <div v-for="item in universities_stats_by_names">
+                    <div class="row-aline">
+                        <div class="col-name">Название:
+                            {{ item.university_name }}
+                        </div>
+                        <div class="col-amount">Количество студентов:
+                            {{ item.student_count }}
+                        </div> 
                     </div>
-                    <div class="col">Количество студентов:
-                        {{ item.student_count }}
-                    </div> 
                 </div>
-                  
+                </div>
+                
             </div>
             
         </div>
@@ -287,6 +291,8 @@ function onImgClick(item)
         margin-top: 10px;
     }
 
+    
+
     .zoomedBox{
         opacity: 1;
         transform: scale(1, 1);
@@ -314,5 +320,46 @@ function onImgClick(item)
     .enlarged img {
         max-width: 100%; /* Масштабируем изображение, чтобы оно занимало всю доступную ширину */
         max-height: 100%; /* Масштабируем изображение, чтобы оно занимало всю доступную высоту */
+    }
+    .filterHeader {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Dark gray header text */
+    }
+
+    .row-aline {
+        margin: 20px;
+        padding: 40px;
+        border-radius: 15px;
+        width: 25%;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF685;
+    }
+
+    .col-name {
+    width: 30%;
+    flex: 1; /* Takes available space */
+    font-weight: bold;
+    text-align: center;
+    color: #555; /* Slightly darker gray for names */
+    }
+
+    .col-amount {
+    width: 70%;
+    flex: 1;
+    text-align: center; /* Aligns numbers to the right */
+    color: #4CAF50; /* Green for student count */ /* You can change this color */
+    }
+    .statsRow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     }
 </style>
