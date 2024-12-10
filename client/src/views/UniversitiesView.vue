@@ -339,7 +339,7 @@ function onImgClick(item)
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #FFF685;
+        background-color: #00CED1;
     }
 
     .col-name {
@@ -347,14 +347,15 @@ function onImgClick(item)
     flex: 1; /* Takes available space */
     font-weight: bold;
     text-align: center;
-    color: #555; /* Slightly darker gray for names */
+    color: #000000; /* Slightly darker gray for names */
     }
 
     .col-amount {
     width: 70%;
     flex: 1;
+    font-weight: bold;
     text-align: center; /* Aligns numbers to the right */
-    color: #4CAF50; /* Green for student count */ /* You can change this color */
+    color: #f9f9f9; /* Green for student count */ /* You can change this color */
     }
     .statsRow{
     display: flex;
