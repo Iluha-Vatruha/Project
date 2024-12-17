@@ -112,7 +112,7 @@ async function onUpdateFaculty() {
                 <select class="form-select" v-model="facultiesToAdd.university" required>
                     <option :value="g.id" v-for="g in universities">{{ g.name }}</option>
                 </select>
-                <label for="floatingInput">Специальность</label>
+                <label for="floatingInput">Университет</label>
                 </div>
             </div>
             <div class="col-auto">
@@ -205,7 +205,7 @@ async function onUpdateFaculty() {
                                     {{ g.name }}
                                 </option>
                                 </select>
-                                <label for="floatingInput">Специальность</label>
+                                <label for="floatingInput">Университет</label>
                             </div>
                         </div>
                     </div>
